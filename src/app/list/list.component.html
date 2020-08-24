@@ -1,0 +1,8 @@
+<h1>Files</h1>
+<a href="#" routerLink="/create"><button class="btn" > Add New File</button></a>
+<ul *ngIf="files">
+  <li *ngFor="let file of files">
+    <p class="title">{{ file.title }} - {{ file.description }}</p>
+    <p class="link"><a href="#" routerLink="/details/{{ file.id }}">File Details</a></p>
+  </li>
+</ul>

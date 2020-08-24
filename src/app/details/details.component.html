@@ -1,0 +1,29 @@
+<h1>File Details:</h1>
+
+<div class="detailsContainer" *ngIf="fileData">
+    <h3>{{ fileData.title }}</h3>
+    <div class="flexcontainer">
+        <div class="flexBig">
+            <p><b>Description:</b> {{ fileData.description }}</p>
+            <p><b>Original Filename:</b> {{ fileData.original_filename }}</p>
+            <p><b>{{fileData.file_type }}</b></p>
+            <p><b>Uploaded on:</b> {{ fileData.created_at }}</p>
+            <p><b>Last updated on:</b> {{ fileData.updated_at }}</p>
+        </div>
+        <div *ngIf="fileData.file_type == 'MP4'">
+            <video width="320" height="240" controls>
+                <source [src]='fileURL()' type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <!-- <embed [src]='fileURL()' type="video/mp4" width="320" height="240" /> -->
+        </div>
+        <div class="fileImage" *ngIf="fileData.file_type == 'jpg'">
+            <img src='fileURL()' alt="{{ fileData.description }}">
+        </div>
+        <div *ngIf="fileData.file_type == 'pdf'">
+            <embed [src]='fileURL()' type="application/pdf" width="100%" height="600px" />
+        </div>
+    </div>
+</div>
+
+<a href="#" routerLink="/edit/{{ fileData.id }}" *ngIf="fileData"><button class="btn" >Edit File Details</button></a>
