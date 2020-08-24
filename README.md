@@ -4,6 +4,7 @@ First make sure you have Node installed on the host machine.  Go here for more i
 Once you have Node installed run `npm install -g @angular/cli` to install the command line interface for angular.
 
 Now navigate to the folder you want to install the app at and download the repository.
+
 `git clone https://github.com/phillipeastman/file_manager_frontend.git`
 
 ## Development server
