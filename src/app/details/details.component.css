@@ -1,15 +1,11 @@
 .detailsContainer {
-    width: 90%;
-    margin: 0 auto;
-}
-
-.detailsContainer h2 {
+    width: 95%;
     margin: 0 auto;
 }
 
 .detailsContainer img{
-    width: 150px;
-    height: auto;
+    width: auto;
+    height: 250px;
     flex: 1 0 0;
 }
 

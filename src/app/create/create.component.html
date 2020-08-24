@@ -1,23 +1,23 @@
 <h1>Add a File</h1>
 <div>
-    <form [formGroup] = "uploadForm" (ngSubmit)="onSubmit()">
-        <div>
-            <label for="title">Title</label>
-            <input type="text" id="title" required formControlName="title">
-          </div>
-          <div>
-            <label for="description">Description</label>
-            <input type="text" id="description" required formControlName="description">
-          </div>
-          <div>
-            <label for="tags">Tags</label>
-            <input type="text" id="tags" formControlName="tags">
-          </div>    
-      <div>
-        <input type="file" name="file" (change)="onFileSelect($event)" />
-      </div>
-      <div>
+  <form [formGroup] = "uploadForm" (ngSubmit)="onSubmit()">
+    <p>
+      <label for="title"><b>Title</b></label>
+      <input type="text" id="title" required formControlName="title">
+    </p>
+    <p>
+      <label for="description"><b>Description</b></label>
+      <input type="text" id="description" required formControlName="description">
+    </p>
+    <p>
+      <label for="tags"><b>Tags</b></label>
+      <input type="text" id="tags" formControlName="tags">
+    </p>    
+    <p>
+        <input type="file" name="file" (change)="onFileSelect($event)" #fileInput/>
+    </p>
+    <p>
         <button type="submit">Upload</button>
-      </div>
-    </form>
+    </p>
+  </form>
 </div>
